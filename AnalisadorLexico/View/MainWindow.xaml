@@ -1,0 +1,29 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnalisadorLexico"
+        xmlns:Model="clr-namespace:AnalisadorLexico.Model" x:Class="AnalisadorLexico.MainWindow"
+        mc:Ignorable="d"
+        Title="Analisador Léxico v1.0 ::[ Pedro Escobar ]::" Height="480" Width="720">
+    <DockPanel LastChildFill="True">
+        <StatusBar DockPanel.Dock="Bottom" Height="30" Background="Teal">
+            <StatusBarItem Content="Resultado: " FontWeight="Bold"/>
+        </StatusBar>
+        <Grid DockPanel.Dock="Top" Background="Azure">
+            <TextBox x:Name="textBoxEntrada" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354"
+                     Text="{Binding Expressao.Texto, UpdateSourceTrigger=PropertyChanged}">
+                <TextBox.InputBindings>
+                    <KeyBinding  Key="Enter" Command="{Binding ValidaCommand}"/>
+                </TextBox.InputBindings>
+            </TextBox>
+            <TextBlock x:Name="textBlock" Margin="0,10,150,0" TextWrapping="Wrap" Text="Histórico" HorizontalAlignment="Right" VerticalAlignment="Top" Height="23" FontWeight="Bold"/>
+            <ScrollViewer Margin="369,38,10,10" >
+                <TextBlock x:Name="textBlockMemoria" TextWrapping="Wrap" Text="{Binding Historico, UpdateSourceTrigger=PropertyChanged}"/>
+            </ScrollViewer>
+            <DataGrid x:Name="dataGridLexemas" HorizontalAlignment="Left" Margin="10,38,0,10" Width="354"
+                     ItemsSource="{Binding TabelaDeLexemas}" />
+        </Grid>
+    </DockPanel>
+</Window>
