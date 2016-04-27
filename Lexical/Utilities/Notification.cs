@@ -1,8 +1,9 @@
 ﻿using System.Windows;
 
-namespace AnalisadorLexico.Helper
+namespace Lexical.Utilities
+
 {
-    class Utils
+    class Notification
     {    
         /// <summary>
         /// Exibe uma mensagem de erro

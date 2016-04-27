@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace AnalisadorLexico.ViewModel
+namespace Lexical.DataTypes
 {
-    internal class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         private Action _action;
         private bool _canExecute;

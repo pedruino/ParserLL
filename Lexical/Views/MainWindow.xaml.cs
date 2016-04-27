@@ -1,9 +1,9 @@
-﻿using AnalisadorLexico.ViewModel;
+﻿using Lexical.ViewModels;
 using System;
 using System.Windows;
 using System.Windows.Input;
 
-namespace AnalisadorLexico
+namespace Lexical
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

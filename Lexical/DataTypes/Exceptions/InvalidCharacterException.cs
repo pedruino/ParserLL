@@ -1,8 +1,8 @@
-﻿using AnalisadorLexico.Helper;
+﻿using Lexical.Helpers;
 using System;
 using System.Runtime.Serialization;
 
-namespace AnalisadorLexico.Exceptions
+namespace Lexical.DataTypes.Exceptions
 {
     [Serializable]
     internal class InvalidCharacterException : Exception
@@ -27,7 +27,7 @@ namespace AnalisadorLexico.Exceptions
         {
             get
             {
-                return Constantes.Messages.INVALID_CHARACTER_EXCEPTION;
+                return Constants.Messages.InvalidCharacterException;
             }
         }
     }

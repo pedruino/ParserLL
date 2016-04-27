@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace AnalisadorLexico
+namespace Lexical
 {
     /// <summary>
     /// Interaction logic for App.xaml

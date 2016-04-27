@@ -1,13 +1,14 @@
-﻿using AnalisadorLexico.Helper;
+﻿using Lexical.DataTypes.Enums;
+using Lexical.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnalisadorLexico.Model
+namespace Lexical.Models
 {
-    class Lexema
+    class Lexeme
     {
         private string _value;    
 
@@ -18,6 +19,6 @@ namespace AnalisadorLexico.Model
             set { _value = value; }
 
         }
-        public EToken Token { get; set; }
+        public eToken Token { get; set; }
     }
 }
