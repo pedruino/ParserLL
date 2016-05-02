@@ -1,4 +1,5 @@
-﻿using Lexical.DataTypes;
+﻿using Analyzer.Lexical.Models;
+using Lexical.DataTypes;
 using Lexical.DataTypes.Exceptions;
 using Lexical.Models;
 using Lexical.Utilities;
@@ -48,7 +49,7 @@ namespace Lexical.ViewModels
         {
             this._expression = new Expression();
 #if DEBUG
-            this._expression.Text = "a = 3+4*(5+9-98)";
+            this._expression.Text = "a = 3+4";// *(5+9-98)";
 #endif
             this._lexemesTable = new ObservableCollection<Lexeme>();
         }
@@ -61,14 +62,15 @@ namespace Lexical.ViewModels
         {
             try
             {
-                this.History += "\n" + this._expression.Text;
+                this.UpdateHistory();
+
                 this._expression.Evaluate();
 
-                if (this._lexemesTable.Any())
-                    this._lexemesTable.Clear();
+                Solver solver = new Solver(this._expression);
+                solver.Analyze();
 
-                foreach (Lexeme lexema in this._expression.Lexemes)
-                    this._lexemesTable.Add(lexema);
+
+                this.RefreshLexemesTable();
             }
             catch (InvalidCharacterException iie)
             {
@@ -78,6 +80,20 @@ namespace Lexical.ViewModels
             {
                 Notification.ShowErrorMessage(e.Message);
             }
+        }
+
+        private void RefreshLexemesTable()
+        {
+            if (this._lexemesTable.Any())
+                this._lexemesTable.Clear();
+
+            foreach (Lexeme lexema in this._expression.Lexemes)
+                this._lexemesTable.Add(lexema);
+        }
+
+        private void UpdateHistory()
+        {
+            this.History += "\n" + this._expression.Text;
         }
     }
 }

@@ -12,6 +12,19 @@
         OperatorPower,
         OperatorAssignment,
         ParenthesisLeft,
-        ParenthesisRight
+        ParenthesisRight,
+
+        Start,
+        End,
+        Expression,
+        Operator,
+        Error,
+        Term,
+        ExpressionL,
+        Empty,
+        TermL,
+        Fator,
+        FatorL,
+        Numero,
     }
 }

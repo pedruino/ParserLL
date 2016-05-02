@@ -7,8 +7,8 @@
     <ProjectGuid>{1CFAFA03-F791-4E07-A422-DF4DD504E4FF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AnalisadorLexico</RootNamespace>
-    <AssemblyName>AnalisadorLexico</AssemblyName>
+    <RootNamespace>Analyzer.Lexical</RootNamespace>
+    <AssemblyName>Analyzer.Lexical</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -65,6 +65,8 @@
     </Compile>
     <Compile Include="DataTypes\Enums\eToken.cs" />
     <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Models\Grammar.cs" />
+    <Compile Include="Models\Solver.cs" />
     <Compile Include="Utilities\Notification.cs" />
     <Compile Include="Models\Lexeme.cs" />
     <Compile Include="Models\Expression.cs" />
