@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Lexical.DataTypes
+namespace Analyzer.DataTypes
 {
     public class ObservableObject : INotifyPropertyChanged
     {

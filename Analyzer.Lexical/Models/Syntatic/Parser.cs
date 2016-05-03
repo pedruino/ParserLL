@@ -1,13 +1,10 @@
-﻿using Lexical.DataTypes.Enums;
-using Lexical.Models;
-using Lexical.Utilities;
-using System;
+﻿using Analyzer.DataTypes.Enums;
+using Analyzer.Models.Lexical;
+using Analyzer.Utilities;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Analyzer.Lexical.Models
+namespace Analyzer.Models.Syntatic
 {
     class Parser
     {
@@ -19,12 +16,12 @@ namespace Analyzer.Lexical.Models
         {
             this._grammar = new Grammar();
             this._readLexemesStack = this.CreateStackOfLexemes(expression);
-            this._expectedTokenStack = new Stack<eToken>(new[] { eToken.End, eToken.Start });
+            this._expectedTokenStack = new Stack<eToken>(new[] { eToken.EndOfSentence, eToken.StartOfSentence });
         }
 
         public void Analyze()
         {
-            while (this._readLexemesStack.Peek().Token != eToken.End)
+            while (this._readLexemesStack.Peek().Token != eToken.EndOfSentence)
             {
                 var readLexeme = this._readLexemesStack.Peek();
                 var expectedToken = this._expectedTokenStack.Peek();
@@ -56,7 +53,7 @@ namespace Analyzer.Lexical.Models
 
         private Stack<Lexeme> CreateStackOfLexemes(Expression expression)
         {
-            var endFakeLexeme = new Lexeme() { Index = expression.Lexemes.Count() - 1, Token = eToken.End, Value = null };
+            var endFakeLexeme = new Lexeme() { Index = expression.Lexemes.Count() - 1, Token = eToken.EndOfSentence, Value = null };
             var newStack = new Stack<Lexeme>(new[] { endFakeLexeme });
 
             foreach (var item in expression.Lexemes.Reverse())

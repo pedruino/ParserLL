@@ -1,12 +1,12 @@
-﻿using Lexical.DataTypes.Exceptions;
-using Lexical.Helpers;
+﻿using Analyzer.DataTypes.Exceptions;
+using Analyzer.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Lexical.DataTypes;
-using Lexical.DataTypes.Enums;
+using Analyzer.DataTypes;
+using Analyzer.DataTypes.Enums;
 
-namespace Lexical.Models
+namespace Analyzer.Models.Lexical
 {
     class Expression : ObservableObject
     {
@@ -50,14 +50,14 @@ namespace Lexical.Models
 
                 this.addMatchesToListOfLexemas(this._numbers, eToken.Number);
                 this.addMatchesToListOfLexemas(this._identifiers, eToken.Identifier);
-                this.addMatchesToListOfLexemas(this._parenthesisLeft, eToken.ParenthesisLeft);
-                this.addMatchesToListOfLexemas(this._parenthesisRight, eToken.ParenthesisRight);
+                this.addMatchesToListOfLexemas(this._parenthesisLeft, eToken.OpenParenthesis);
+                this.addMatchesToListOfLexemas(this._parenthesisRight, eToken.CloseParenthesis);
                 this.addMatchesToListOfLexemas(this._operatorsAddition, eToken.OperatorAddition);
                 this.addMatchesToListOfLexemas(this._operatorsSubtraction, eToken.OperatorSubtraction);
                 this.addMatchesToListOfLexemas(this._operatorsMultiply, eToken.OperatorMultiply);
                 this.addMatchesToListOfLexemas(this._operatorsDivision, eToken.OperatorDivision);
                 this.addMatchesToListOfLexemas(this._operatorsPower, eToken.OperatorPower);
-                this.addMatchesToListOfLexemas(this._operatorsAssignment, eToken.OperatorAssignment);
+                this.addMatchesToListOfLexemas(this._operatorsAssignment, eToken.Attribution);
             }
             else
                 throw new InvalidCharacterException();

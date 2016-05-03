@@ -1,8 +1,8 @@
-﻿using Lexical.Helpers;
+﻿using Analyzer.Helpers;
 using System;
 using System.Runtime.Serialization;
 
-namespace Lexical.DataTypes.Exceptions
+namespace Analyzer.DataTypes.Exceptions
 {
     [Serializable]
     internal class InvalidCharacterException : Exception

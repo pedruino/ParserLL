@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Lexical.DataTypes
+namespace Analyzer.DataTypes
 {
     public class RelayCommand : ICommand
     {

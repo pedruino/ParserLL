@@ -1,4 +1,4 @@
-﻿namespace Lexical.DataTypes.Enums
+﻿namespace Analyzer.DataTypes.Enums
 {
     enum eToken
     {
@@ -10,14 +10,13 @@
         OperatorMultiply,
         OperatorDivision,
         OperatorPower,
-        OperatorAssignment,
-        ParenthesisLeft,
-        ParenthesisRight,
+        Attribution,
+        OpenParenthesis,
+        CloseParenthesis,
 
-        Start,
-        End,
+        StartOfSentence,
+        EndOfSentence,
         Expression,
-        Operator,
         Error,
         Term,
         ExpressionL,
@@ -26,5 +25,12 @@
         Fator,
         FatorL,
         NumberL,
+
+        //future features
+        ArithmeticOperator, //replace all operators by 
+        Comma,
+        SemiColon,
+        Colon,
+        Constant //replace Number by
     }
 }

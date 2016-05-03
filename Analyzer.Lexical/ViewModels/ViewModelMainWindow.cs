@@ -1,14 +1,14 @@
 ﻿using Analyzer.Lexical.Models;
-using Lexical.DataTypes;
-using Lexical.DataTypes.Exceptions;
-using Lexical.Models;
-using Lexical.Utilities;
+using Analyzer.DataTypes;
+using Analyzer.DataTypes.Exceptions;
+using Analyzer.Models;
+using Analyzer.Utilities;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 
-namespace Lexical.ViewModels
+namespace Analyzer.ViewModels
 {
     class ViewModelMainWindow : ObservableObject
     {

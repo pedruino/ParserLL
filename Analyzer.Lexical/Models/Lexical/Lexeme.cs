@@ -1,12 +1,6 @@
-﻿using Lexical.DataTypes.Enums;
-using Lexical.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Analyzer.DataTypes.Enums;
 
-namespace Lexical.Models
+namespace Analyzer.Models.Lexical
 {
     class Lexeme
     {

@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Lexical"
-        xmlns:Model="clr-namespace:Lexical.Models" x:Class="Lexical.MainWindow"
+        xmlns:local="clr-namespace:Analyzer"
+        xmlns:Model="clr-namespace:Analyzer.Models" x:Class="Analyzer.MainWindow"
         mc:Ignorable="d"
         Title="Analisador Léxico v1.0 ::[ Pedro Escobar ]::" Height="480" Width="720">
     <DockPanel LastChildFill="True">

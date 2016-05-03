@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Lexical.Utilities
+namespace Analyzer.Utilities
 
 {
     class Notification

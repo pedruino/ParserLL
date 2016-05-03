@@ -1,4 +1,4 @@
-﻿namespace Lexical.Helpers
+﻿namespace Analyzer.Helpers
 {
     public static class Constants
     {
