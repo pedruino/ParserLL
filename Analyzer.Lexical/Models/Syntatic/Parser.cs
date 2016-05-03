@@ -21,7 +21,7 @@ namespace Analyzer.Models.Syntatic
 
         public void Analyze()
         {
-            while (this._readLexemesStack.Peek().Token != eToken.EndOfSentence)
+            while (this._expectedTokenStack.Peek() != eToken.EndOfSentence)
             {
                 var readLexeme = this._readLexemesStack.Peek();
                 var expectedToken = this._expectedTokenStack.Peek();

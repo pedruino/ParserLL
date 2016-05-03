@@ -1,7 +1,7 @@
-﻿using Analyzer.Lexical.Models;
-using Analyzer.DataTypes;
+﻿using Analyzer.DataTypes;
 using Analyzer.DataTypes.Exceptions;
-using Analyzer.Models;
+using Analyzer.Models.Lexical;
+using Analyzer.Models.Syntatic;
 using Analyzer.Utilities;
 using System;
 using System.Collections.ObjectModel;
