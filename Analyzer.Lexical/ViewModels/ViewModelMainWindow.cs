@@ -49,7 +49,7 @@ namespace Lexical.ViewModels
         {
             this._expression = new Expression();
 #if DEBUG
-            this._expression.Text = "a = 3+4";// *(5+9-98)";
+            this._expression.Text = "a = 3+4*(5+9-98)";
 #endif
             this._lexemesTable = new ObservableCollection<Lexeme>();
         }
@@ -66,9 +66,7 @@ namespace Lexical.ViewModels
 
                 this._expression.Evaluate();
 
-                Solver solver = new Solver(this._expression);
-                solver.Analyze();
-
+                new Parser(this._expression).Analyze();
 
                 this.RefreshLexemesTable();
             }
